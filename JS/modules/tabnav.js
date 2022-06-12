@@ -1,37 +1,33 @@
-export default function initTabnav() {
-  const sections = Array.from(document.querySelectorAll('.animais-descricao section'));
-  const tabNav = Array.from(document.querySelectorAll('.js-tabnav li'));
+export default class Tabnav {
+  constructor(menu, content) {
+    this.sections = Array.from(document.querySelectorAll(content));
+    this.tabNav = Array.from(document.querySelectorAll(menu));
+    this.activeClass = 'active';
+  }
 
-  const showDown = 'show-down';
-  const showRight = 'show-right';
+  // ativa a tab de acordo com o index da mesma
+  activeTab(index) {
+    this.sections.forEach((section) => {
+      section.classList.remove(this.activeClass);
+      section.dataset.anime = '';
+    });
+    const direcao = this.sections[index].dataset.anime = 'show-right';
+    this.sections[index].classList.add(this.activeClass, direcao);
+  }
 
-  tabNav[0].classList.add(showDown);
-  sections[0].dataset.anime = showDown;
-  sections[0].classList.add(showDown);
+  // adiciona evento nas tabs
 
-  function indexImg(index) {
-    const insertShowRight = sections[index].dataset.anime = showRight;
-    const insertShowDown = sections[index].dataset.anime = showDown;
-
-    sections.forEach((section) => {
-      section.classList.remove(insertShowDown, insertShowRight);
-      sections[index].classList.add(insertShowRight);
-      delete section.dataset.anime;
-
-      if (index > 2) {
-        sections[index].dataset.anime = showRight;
-      } else {
-        sections[index].classList.remove(insertShowRight, insertShowDown);
-        sections[index].classList.add(insertShowDown);
-        sections[index].dataset.anime = showDown;
-      }
+  addEventTab() {
+    this.tabNav.forEach((itemMenu, index) => {
+      itemMenu.addEventListener('click', () => this.activeTab(index));
     });
   }
-  if (sections.length && tabNav.length) {
-    tabNav.forEach((item, index) => {
-      item.addEventListener('click', () => {
-        indexImg(index);
-      });
-    });
+
+  init() {
+    if (this.tabNav.length && this.sections.length) {
+      // ativar primero item
+      this.activeTab(0);
+      this.addEventTab();
+    }
   }
 }
