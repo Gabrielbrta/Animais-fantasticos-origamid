@@ -1,6 +1,6 @@
-<h1 tyle="color: ##71B7FF">Animais-fantasticos-origamid</h1>
+<h1 style="color: ##71B7FF">Animais-fantasticos-origamid</h1>
 <p>curso de javascript ES6 da origamid</p>
-## O que eu aprendi neste curso:
+<h2>O que eu aprendi neste curso:</h2>
 <li>Objetos</li>
 <li>Modules</>
 <li>Strings</li>
@@ -16,5 +16,5 @@
 <h2 style="color: ##71B7FF">Conclusão</h2>
 <p style="color: #f7f7f7">
   Com este curso eu realmente amei javascript, antes eu pensava que era impossivel aprender, agora eu mudei de pensamento.
-  Hoje eu posso contruir qualquer coisa com javascript e tenho o prazer de procurar novas funcionalidades.
+  Hoje eu posso construir qualquer coisa com javascript e tenho o prazer de procurar novas funcionalidades.
 </p>
