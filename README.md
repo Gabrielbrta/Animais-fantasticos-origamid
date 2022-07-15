@@ -19,4 +19,4 @@
   Hoje eu posso construir qualquer coisa com javascript e tenho o prazer de procurar novas funcionalidades.
 </p>
 
-[Site](https://gabrielbrta.github.io/Animais-fantasticos-origamid/)
+[Resultado](https://gabrielbrta.github.io/Animais-fantasticos-origamid/)
