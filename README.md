@@ -1,5 +1,5 @@
 <h1>Animais-fantasticos-origamid</h1>
-<p>curso de javascript ES6 da origamid</p>
+<p>Curso de Javascript ES6 Completo da origamid</p>
 <h2>O que eu aprendi neste curso:</h2>
 <li>Objetos</li>
 <li>Modules</>
